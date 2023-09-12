@@ -23,6 +23,9 @@ public class Webpage {
 		    Actions a = new Actions(driver);
 		   
 			driver.get("https://piraiinfo.com/");
+
+		        WebElement nav= driver.findElement(By.cssSelector("#about > a:nth-child(1)"));
+			nav.click();
 			
 			WebElement services = driver.findElement(By.xpath("//button[@id='service']"));
 			a.moveToElement(services).perform();
